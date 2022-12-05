@@ -7,6 +7,7 @@ import { SideWarComponent } from './side-war/side-war.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
     NavBarComponent,
     HomeComponent,
     FooterComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
