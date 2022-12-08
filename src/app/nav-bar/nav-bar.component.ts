@@ -13,6 +13,5 @@ public notifications:any
  }
  ngOnInit(): void {
    this.notifications = this.servises.notificationData()
-   console.log(this.notifications)
  }
 }
