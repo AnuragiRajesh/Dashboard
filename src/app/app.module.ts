@@ -11,19 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 
-import { MqttModule, IMqttServiceOptions } from "ngx-mqtt";
 import { ChatComponent } from './chat/chat.component';
-export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-  hostname: '127.0.0.1',
-  port: 4587,
-  path: '/mqtt'
-}
 
-// export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-//   hostname: '127.0.0.1',
-//   port: 4587,
-//   path: '/mqtt'
-// }
 
 @NgModule({
   declarations: [
@@ -40,7 +29,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MqttModule.forRoot(MQTT_SERVICE_OPTIONS)
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,13 +6,13 @@
         <!-- Info boxes -->
         <div  class="row">
           <div *ngFor="let user of Data" class="col-12 col-sm-6 col-md-3" >
-            <div class="info-box" [style.background-color]="user.backgroundColor">
+            <div class="info-box" [style.background-color]="user.backgroundColor" style=" word-wrap: break-word;">
               <!-- <span class="info-box-icon bg-info elevation-1" ><i class="fas fa-cog"></i></span> -->
 
               <div class="info-box-content" >
                 <span class="info-box-text">{{user.label}}</span>
                 <span class="info-box-number">
-                  {{user.data[0]}}
+                  {{count}}
                  
                 </span>
               </div>
