@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule } from "@angular/forms";
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideWarComponent } from './side-war/side-war.component';
@@ -11,18 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 
-import { MqttModule, IMqttServiceOptions } from "ngx-mqtt";
-export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-  hostname: '127.0.0.1',
-  port: 4587,
-  path: '/mqtt'
-}
+import { ChatComponent } from './chat/chat.component';
 
-// export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-//   hostname: '127.0.0.1',
-//   port: 4587,
-//   path: '/mqtt'
-// }
 
 @NgModule({
   declarations: [
@@ -32,12 +22,14 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     HomeComponent,
     FooterComponent,
     ContactComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MqttModule.forRoot(MQTT_SERVICE_OPTIONS)
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
